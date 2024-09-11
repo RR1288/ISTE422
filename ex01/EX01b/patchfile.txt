@@ -1,6 +1,8 @@
-13,14c13,28
+13,16c13,30
 < //Read the file from the file system
 < var obj = JSON.parse(fs.readFileSync('./data.json','utf8'));
+< //get the date from the first item.
+< var date = new Date(obj[0].timestamp);
 ---
 > 
 > //Read the file from args
@@ -18,6 +20,8 @@
 > }
 > 
 > var obj = JSON.parse(fs.readFileSync(filename,'utf8'));
+> //get the current date
+> var date = new Date();
 26,27c40,41
 <   if(item.creditcard != null){
 <     csv += item.name + "," + item.creditcard + "\n";

@@ -26,8 +26,8 @@ if(!fs.existsSync(filename)) {
 }
 
 var obj = JSON.parse(fs.readFileSync(filename,'utf8'));
-//get the date from the first item.
-var date = new Date(obj[0].timestamp);
+//get the current date
+var date = new Date();
 //format the date to the YYYYMMDD.csv required for the submission.
 var datef = date.getFullYear() + pad2(date.getMonth()+1) + pad2(date.getDate());
 //to return string object
